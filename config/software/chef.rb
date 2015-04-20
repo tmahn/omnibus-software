@@ -14,9 +14,9 @@
 # limitations under the License.
 #
 name "chef"
-default_version "master"
+default_version "ksubrama/win64"
 
-source git: "git://github.com/opscode/chef"
+source git: "git://github.com/chef/chef"
 
 relative_path "chef"
 
@@ -32,6 +32,7 @@ else
 end
 
 dependency "bundler"
+dependency "mixlib-shellout"
 dependency "ohai"
 dependency "appbundler"
 
@@ -92,6 +93,7 @@ build do
         " --verbose", env: env
   end
 
+  appbundle 'mixlib-shellout'
   appbundle 'chef'
   appbundle 'ohai'
 
