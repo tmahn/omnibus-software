@@ -1,5 +1,5 @@
 #
-# Copyright 2012-2014 Chef Software, Inc.
+# Copyright 2012-2015 Chef Software, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,31 +15,15 @@
 #
 
 name "ruby-windows"
-default_version "1.9.3-p484"
+default_version "2.1.6"
 
-relative_path "ruby-#{version}-i386-mingw32"
+relative_path "ruby-#{version}-x64-mingw32"
 
-version "1.9.3-p484" do
-  source md5: "a0665113aaeea83f1c4bea02fcf16694"
+version "2.1.6" do
+  source md5: "a443794bc4c22091193eccf0b02f763e"
 end
 
-version "2.0.0-p451" do
-  source md5: "37feadb0230e7f475a8591d1807ecfec"
-end
-
-version "2.1.3" do
-  source md5: "60e39aaab140c3a22abdc04ec2017968"
-end
-
-version "2.1.5" do
-  source md5: "fe6b596fc47f503b0c0c01ebed16cf65"
-end
-
-version "2.2.1" do
-  source md5: "9f1beca535b2e60098d826eb7cb1b972"
-end
-
-source url: "http://dl.bintray.com/oneclick/rubyinstaller/ruby-#{version}-i386-mingw32.7z?direct"
+source url: "http://dl.bintray.com/oneclick/rubyinstaller/ruby-#{version}-x64-mingw32.7z?direct"
 
 build do
 

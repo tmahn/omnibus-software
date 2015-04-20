@@ -22,10 +22,7 @@ relative_path "chef"
 
 if windows?
   dependency "ruby-windows"
-  dependency "libyaml-windows"
-  dependency "openssl-windows"
   dependency "ruby-windows-devkit"
-  dependency "ruby-windows-devkit-bash"
   dependency "cacerts"
   dependency "rubygems"
 else
@@ -59,7 +56,7 @@ build do
       copy "#{install_dir}/embedded/mingw/bin/#{to}", "#{install_dir}/bin/#{target}"
     end
 
-    gem "build chef-x86-mingw32.gemspec", env: env
+    gem "build chef-windows.gemspec", env: env
     gem "install chef*mingw32.gem" \
         " --no-ri --no-rdoc" \
         " --verbose", env: env
