@@ -1,0 +1,11 @@
+--- git-1.9.0.org/dir.c 2015-05-20 18:49:59.000000000 -0500
++++ git-1.9.0/dir.c 2015-05-20 18:51:22.000000000 -0500
+@@ -52,7 +52,7 @@
+  return fnmatch(pattern, string, flags | (ignore_case ? FNM_CASEFOLD : 0));
+ }
+ 
+-inline int git_fnmatch(const struct pathspec_item *item,
++int git_fnmatch(const struct pathspec_item *item,
+           const char *pattern, const char *string,
+           int prefix)
+ {
