@@ -39,5 +39,5 @@ build do
 
   gem "build ohai.gemspec", env: env
   gem "install ohai*.gem" \
-      " --no-ri --no-rdoc", env: env
+      " --no-ri --no-rdoc --verbose", env: env
 end
