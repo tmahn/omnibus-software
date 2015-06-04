@@ -15,7 +15,10 @@
 #
 
 name "dep-selector-libgecode"
-default_version "1.0.2"
+default_version "smartOS"
+relative_path "dep-selector-libgecode"
+
+source git: "git://github.com/tmahn/dep-selector-libgecode"
 
 dependency "bundler"
 

@@ -16,7 +16,7 @@
 #
 
 name "ohai"
-default_version "master"
+default_version "smartOS"
 
 source git: "git://github.com/tmahn/ohai"
 
